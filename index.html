@@ -103,20 +103,7 @@
       background: #eee;
     }
 
-    /* Light/Dark toggle */
-    .theme-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: var(--primary-color);
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 8px;
-      cursor: pointer;
-      z-index: 1000;
-      font-weight: bold;
-    }
+
 
     /* Responsive */
     @media (max-width: 600px) {
@@ -128,7 +115,7 @@
 </head>
 <body>
 
-  <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
+
 
   <header>
     <h1>Srinath Mandha</h1>
@@ -320,17 +307,7 @@
     &copy; 2025 Srinath Mandha's - Portfolio.
   </div>
 
-  <script>
-    function toggleTheme() {
-      if(document.body.style.background === 'black') {
-        document.body.style.background = 'var(--bg-color)';
-        document.body.style.color = 'var(--text-color)';
-      } else {
-        document.body.style.background = 'black';
-        document.body.style.color = 'white';
-      }
-    }
-  </script>
+
 
 </body>
 </html>

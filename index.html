@@ -5,64 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Srinath Mandha – API Gateway | AWS | DevOps Engineer</title>
   <style>
+    :root {
+      --primary-color: #00517a;
+      --accent-color: #0088cc;
+      --bg-color: #f9f9f9;
+      --card-bg: #ffffff;
+      --text-color: #333;
+      --footer-color: #666;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f9f9f9;
-      color: #333;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
     }
+
     header {
-      background: #00517a;
+      background: var(--primary-color);
       color: white;
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
+      position: relative;
     }
+
     header h1 {
       margin: 0;
       font-size: 3em;
+      letter-spacing: 1px;
     }
+
     header p {
       font-size: 1.2em;
       max-width: 800px;
-      margin: 10px auto 0;
+      margin: 15px auto 0;
     }
+
     .container {
       max-width: 960px;
       margin: auto;
       padding: 40px 20px;
     }
+
     h2 {
-      color: #00517a;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 6px;
+      color: var(--primary-color);
+      border-bottom: 3px solid #ddd;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
     }
+
     .card {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 25px;
       margin: 20px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
     .card h3 {
       margin-top: 0;
-      color: #004466;
+      color: var(--primary-color);
+      font-size: 1.3em;
     }
+
     ul {
       padding-left: 20px;
     }
+
     a {
-      color: #00517a;
+      color: var(--accent-color);
       text-decoration: none;
+      transition: color 0.3s;
     }
+
+    a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
     .footer {
       text-align: center;
       font-size: 0.9em;
-      padding: 20px;
-      color: #666;
+      padding: 25px 20px;
+      color: var(--footer-color);
+      background: #eee;
+    }
+
+    /* Light/Dark toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1000;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2em; }
+      header p { font-size: 1em; }
+      .card { padding: 20px; }
     }
   </style>
 </head>
 <body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
 
   <header>
     <h1>Srinath Mandha</h1>
@@ -101,7 +167,6 @@
     <!-- Java / Full-Stack Development -->
     <section>
       <h2>💼 Java & Full-Stack Development</h2>
-
       <div class="card">
         <h3>Java Developer</h3>
         <ul>
@@ -110,7 +175,6 @@
           <li>Enhanced UI components with HTML, CSS, and JavaScript to improve user experience and performance.</li>
         </ul>
       </div>
-
       <div class="card">
         <h3>Full Stack Developer</h3>
         <ul>
@@ -120,7 +184,6 @@
           <li>Collaborated with the development team to ensure smooth integration between frontend, backend, and deployment processes.</li>
         </ul>
       </div>
-
       <div class="card">
         <h3>CI/CD Engineer – Full Stack Applications</h3>
         <ul>
@@ -135,7 +198,6 @@
     <!-- Axway API Gateway -->
     <section>
       <h2>💼 Axway API Gateway Experience</h2>
-
       <div class="card">
         <h3>API Gateway Architect</h3>
         <ul>
@@ -145,7 +207,6 @@
           <li>Implemented production-ready configurations including SSL setup, clustering, monitoring, and failover mechanisms.</li>
         </ul>
       </div>
-
       <div class="card">
         <h3>API Gateway Policy Developer</h3>
         <ul>
@@ -155,24 +216,13 @@
           <li>Collaborated with teams to integrate policies seamlessly with backend services and client applications.</li>
         </ul>
       </div>
-
       <div class="card">
-        <h3>API Gateway & SSO Engineer</h3>
+        <h3>API Gateway Authentication Engineer</h3>
         <ul>
-          <li>Implemented Single Sign-On (SSO) logins for Axway API Gateway using Okta.</li>
-          <li>Configured identity providers and mapped user roles to ensure proper access control.</li>
-          <li>Tested and validated SSO workflows to guarantee reliable authentication across environments.</li>
-          <li>Collaborated with security and development teams to integrate SSO with existing APIs and backend services.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>API Gateway & OAuth 2.0 Engineer</h3>
-        <ul>
-          <li>Implemented OAuth 2.0 services in Axway API Gateway for secure API authentication and authorization.</li>
-          <li>Configured clients, scopes, and tokens to ensure proper access control across APIs.</li>
-          <li>Integrated OAuth 2.0 workflows with existing SSO and backend services for seamless user experience.</li>
-          <li>Verified and tested all related components, roles, and tools to ensure consistent and secure API access.</li>
+          <li>Implemented Single Sign-On (SSO) logins for Axway API Gateway using Okta for seamless user authentication.</li>
+          <li>Configured OAuth 2.0 services including clients, scopes, and tokens to enforce secure API authentication and authorization.</li>
+          <li>Integrated SSO and OAuth workflows with backend services for consistent access control and user experience.</li>
+          <li>Verified and tested all authentication components, roles, and tools to ensure secure and reliable API access.</li>
           <li>Documented processes and best practices to maintain long-term security and compliance.</li>
         </ul>
       </div>
@@ -198,10 +248,9 @@
       </div>
     </section>
 
-    <!-- Security, Monitoring & Automation -->
+    <!-- Security, Monitoring & Cloud -->
     <section>
-      <h2>💼 Security, Monitoring & Automation</h2>
-
+      <h2>💼 Security, Monitoring & Cloud Automation</h2>
       <div class="card">
         <h3>Security & Cloud Engineer</h3>
         <ul>
@@ -241,6 +290,17 @@
           <li>Collaborated with teams to embed security early in the software lifecycle.</li>
         </ul>
       </div>
+
+      <div class="card">
+        <h3>Cloud & Infrastructure Management Engineer</h3>
+        <ul>
+          <li>Designed and provisioned scalable AWS infrastructure using CloudFormation templates.</li>
+          <li>Automated setup of VPCs, subnets, security groups, ECS clusters, EC2 instances, and S3 buckets.</li>
+          <li>Ensured infrastructure-as-code (IaC) best practices for repeatable, version-controlled deployments.</li>
+          <li>Collaborated with teams to integrate infrastructure automation with CI/CD pipelines for end-to-end deployment.</li>
+          <li>Implemented monitoring, logging, and alerting mechanisms to maintain reliable cloud operations.</li>
+        </ul>
+      </div>
     </section>
 
     <!-- Contact -->
@@ -257,8 +317,20 @@
   </div>
 
   <div class="footer">
-    &copy; 2025 Srinath Mandha. Built with 💙 and hosted on GitHub Pages.
+    &copy; 2025 Srinath Mandha's - Portfolio.
   </div>
+
+  <script>
+    function toggleTheme() {
+      if(document.body.style.background === 'black') {
+        document.body.style.background = 'var(--bg-color)';
+        document.body.style.color = 'var(--text-color)';
+      } else {
+        document.body.style.background = 'black';
+        document.body.style.color = 'white';
+      }
+    }
+  </script>
 
 </body>
 </html>

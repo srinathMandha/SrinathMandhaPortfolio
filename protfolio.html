@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Srinath Mandha – API Gateway | AWS | DevOps Engineer</title>
+  
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-CmC+VhGvVqHf5T8q2lXD2RhHEB0v5G56svmTxZzJ3U0xqVj2B+UfsV5T+ayKg8aTRR8ZpO5R0YF3I5w8S+mGVA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --primary-color: #00517a;
+      --accent-color: #0088cc;
+      --bg-color: #f9f9f9;
+      --card-bg: #ffffff;
+      --text-color: #333;
+      --footer-color: #666;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: var(--primary-color);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 15px auto 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      border-bottom: 3px solid #ddd;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      font-size: 1.5em;
+    }
+
+    h2 i {
+      margin-right: 10px;
+      color: var(--accent-color);
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 25px;
+      margin: 20px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--primary-color);
+      font-size: 1.3em;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: 900;
+      color: var(--accent-color);
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      padding: 25px 20px;
+      color: var(--footer-color);
+      background: #eee;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1000;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2em; }
+      header p { font-size: 1em; }
+      .card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
+
+  <header>
+    <h1>Srinath Mandha</h1>
+    <p>Java Full-Stack Developer • API Gateway Architect • AWS DevOps & DevSecOps Engineer</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Profile Summary -->
+    <section>
+      <h2><i class="fas fa-user"></i>Profile Summary</h2>
+      <div class="card">
+        <p>
+          Passionate technologist with experience in full-stack development, API platform architecture, cloud infrastructure, DevOps automation, and security. Specializes in Axway API Gateway, AWS, Java, Python, and DevSecOps practices, delivering secure, scalable, and automated enterprise solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Core Skills -->
+    <section>
+      <h2><i class="fas fa-code"></i>Core Skills</h2>
+      <div class="card">
+        <ul>
+          <li>Java, Spring Boot, Angular, React, Node.js, .NET, Python FastAPI</li>
+          <li>Axway API Gateway Architecture & Custom Policy Development</li>
+          <li>AWS (ECS, EKS, EC2, S3, IAM, VPC, CloudFormation, CodePipeline, CodeDeploy)</li>
+          <li>CI/CD: Jenkins, GitHub Actions, AWS CodePipeline, Ansible</li>
+          <li>DevSecOps: CodeQL, SSO, OAuth 2.0, LDAP/AD Integration</li>
+          <li>Docker, Kubernetes, Linux, Shell Scripting</li>
+          <li>Databases: Cassandra, SQL</li>
+          <li>Monitoring & Automation: Controlio, Nessus, Custom Scripts</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Java / Full-Stack Development -->
+    <section>
+      <h2><i class="fas fa-laptop-code"></i>Java & Full-Stack Development</h2>
+      <div class="card">
+        <h3>Java Developer</h3>
+        <ul>
+          <li>Developed and maintained JSP-based web applications integrated with Oracle databases.</li>
+          <li>Implemented backend logic using Java Servlets and JDBC for efficient data handling and secure transactions.</li>
+          <li>Enhanced UI components with HTML, CSS, and JavaScript to improve user experience and performance.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Full Stack Developer</h3>
+        <ul>
+          <li>Contributed to development of an application portal built with Java Spring Boot and Angular.</li>
+          <li>Individually implemented Docker for containerization and environment consistency.</li>
+          <li>Designed and configured CI/CD pipelines using AWS CodePipeline for automated build and deployment workflows.</li>
+          <li>Collaborated with the development team to ensure smooth integration between frontend, backend, and deployment processes.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>CI/CD Engineer – Full Stack Applications</h3>
+        <ul>
+          <li>Developed CI/CD pipelines for multiple frontend and backend applications using Jenkins, GitHub Actions, and AWS CodePipeline.</li>
+          <li>Worked with Java Spring Boot, Angular, React, Node.js, and .NET frameworks.</li>
+          <li>Automated deployments to AWS ECS and EC2 environments for consistent and reliable releases.</li>
+          <li>Integrated version control, testing, and build processes to streamline full-stack deployment workflows.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Axway API Gateway -->
+    <section>
+      <h2><i class="fas fa-network-wired"></i>Axway API Gateway</h2>
+      <div class="card">
+        <h3>API Gateway Architect</h3>
+        <ul>
+          <li>Set up complete Axway API Gateway platform ensuring secure and high-availability deployment.</li>
+          <li>Configured a distributed Cassandra database cluster to support reliable and scalable data storage.</li>
+          <li>Created and configured Axway API Gateway Groups and Instances optimized for scalability and environment isolation.</li>
+          <li>Implemented production-ready configurations including SSL setup, clustering, monitoring, and failover mechanisms.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>API Gateway Policy Developer</h3>
+        <ul>
+          <li>Developed and maintained policies including standard global policies and custom policies.</li>
+          <li>Implemented secure authentication mechanisms using Active Directory (AD) and LDAP integration.</li>
+          <li>Ensured policies were reusable, modular, and aligned with best practices.</li>
+          <li>Collaborated with teams to integrate policies seamlessly with backend services and client applications.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>API Gateway Authentication Engineer</h3>
+        <ul>
+          <li>Implemented Single Sign-On (SSO) logins using Okta.</li>
+          <li>Configured OAuth 2.0 services including clients, scopes, and tokens for secure API access.</li>
+          <li>Integrated SSO and OAuth workflows with backend services for consistent access control.</li>
+          <li>Verified all authentication components, roles, and tools to ensure secure and reliable API access.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>DevOps & CI/CD Engineer – API Gateway</h3>
+        <ul>
+          <li>Implemented CI/CD pipelines using Jenkins for automated deployment of Swagger/OpenAPI definitions and policies to the Axway API Gateway.</li>
+          <li>Integrated version control and build tools to streamline API lifecycle management.</li>
+          <li>Collaborated with development and infrastructure teams to maintain reliable deployment workflows.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>API Gateway & Database Upgrade Engineer</h3>
+        <ul>
+          <li>Performed manual upgrades of Axway API Gateway and Cassandra database with zero downtime.</li>
+          <li>Developed shell scripts to automate repetitive upgrade tasks.</li>
+          <li>Assisted in implementing fully automated upgrade workflows using Ansible for reliable deployments.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Security, Monitoring & Cloud -->
+    <section>
+      <h2><i class="fas fa-lock"></i>Security, Monitoring & Cloud Automation</h2>
+      <div class="card">
+        <h3>Security & Cloud Engineer</h3>
+        <ul>
+          <li>Architected and deployed Nessus vulnerability scanning solution in AWS Cloud.</li>
+          <li>Configured scanning policies and schedules to proactively identify security gaps and compliance issues.</li>
+          <li>Integrated the solution with cloud infrastructure for continuous vulnerability assessment.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Employee Monitoring & Automation Engineer</h3>
+        <ul>
+          <li>Set up Controlio employee monitoring tool to track workforce activity and productivity.</li>
+          <li>Implemented rules and custom metrics to capture key performance indicators and ensure compliance.</li>
+          <li>Configured dashboards and reports to provide actionable insights.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Backend & Cloud Automation Engineer</h3>
+        <ul>
+          <li>Implemented File Scan API using Python FastAPI to validate files before entering organizational databases.</li>
+          <li>Developed AWS Lambda workflows to scan files in S3 buckets for security and compliance checks.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>DevSecOps & GitHub Security Engineer</h3>
+        <ul>
+          <li>Implemented CodeQL analysis in GitHub repositories to identify vulnerabilities and enforce secure coding practices.</li>
+          <li>Integrated security checks into development and operational workflows to ensure smooth processes.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Cloud & Infrastructure Management Engineer</h3>
+        <ul>
+          <li>Designed and provisioned scalable AWS infrastructure using CloudFormation templates.</li>
+          <li>Automated setup of VPCs, subnets, security groups, ECS clusters, EC2 instances, and S3 buckets.</li>
+          <li>Implemented monitoring, logging, and alerting mechanisms to maintain reliable cloud operations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2><i class="fas fa-envelope"></i>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:vickysrinath.mandha@gmail.com">vickysrinath.mandha@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919666633542">+91-96666-33542</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/mandha-srinath-205537155/" target="_blank">
+          linkedin.com/in/mandha-srinath-205537155</a></p>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Srinath Mandha
+  </div>
+
+  <script>
+    function toggleTheme() {
+      if(document.body.style.background === 'black') {
+        document.body.style.background = 'var(--bg-color)';
+        document.body.style.color = 'var(--text-color)';
+      } else {
+        document.body.style.background = 'black';
+        document.body.style.color = 'white';
+      }
+    }
+  </script>
+
+</body>
+</html>
